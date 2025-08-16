@@ -15,12 +15,12 @@ jobs:
         
       - name: before checkout
         run: ls
-        shell: bash
+        shell: sh
       
       - name: checkout steps
         uses: actions/checkout@v5
 
       - name: after checkout
         run: ls
-        shell: bash
+        shell: sh
   
