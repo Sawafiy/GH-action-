@@ -8,7 +8,14 @@ jobs:
     name: first-jop
     runs-on: ubuntu-latest
     steps:
-      - name: run command bash
-        run: echo "first workflow from sawaf"
+      - name: before checkout
+        run: ls
+        shell: bash
+      
+      - name: checkout steps
+        uses: actions/checkout@v5
+
+      - name: after checkout
+        run: ls
         shell: bash
   
