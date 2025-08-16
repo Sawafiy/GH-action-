@@ -7,7 +7,12 @@ jobs:
   first-workflow-job:
     name: first-jop
     runs-on: ubuntu-latest
+    container:
+      image: node:14.16
     steps:
+      - name: check node version
+        run: node -v
+        
       - name: before checkout
         run: ls
         shell: bash
